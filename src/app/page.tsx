@@ -1,103 +1,204 @@
-import Image from "next/image";
+'use client'
+import React from 'react'
+import { motion } from 'framer-motion'
+import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react'
+import Link from 'next/link'
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const containerStyle = {
+    minHeight: '100vh',
+    background: 'linear-gradient(135deg, #1f2937 0%, #1e3a8a 50%, #7c3aed 100%)',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: '0 1.5rem',
+    paddingTop: '4rem',
+    position: 'relative' as const,
+    overflow: 'hidden'
+  }
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+  const backgroundOrbStyle1 = {
+    position: 'absolute' as const,
+    top: '25%',
+    left: '25%',
+    width: '24rem',
+    height: '24rem',
+    backgroundColor: '#3b82f6',
+    opacity: 0.2,
+    borderRadius: '50%',
+    filter: 'blur(3rem)',
+    animation: 'pulse 2s infinite'
+  }
+
+  const backgroundOrbStyle2 = {
+    position: 'absolute' as const,
+    bottom: '25%',
+    right: '25%',
+    width: '24rem',
+    height: '24rem',
+    backgroundColor: '#8b5cf6',
+    opacity: 0.2,
+    borderRadius: '50%',
+    filter: 'blur(3rem)',
+    animation: 'pulse 2s infinite 1s'
+  }
+
+  const contentStyle = {
+    position: 'relative' as const,
+    zIndex: 10,
+    textAlign: 'center' as const,
+    maxWidth: '64rem',
+    margin: '0 auto'
+  }
+
+  const nameStyle = {
+    fontSize: 'clamp(3rem, 8vw, 7rem)',
+    fontWeight: 'bold',
+    marginBottom: '1.5rem',
+    background: 'linear-gradient(to right, #60a5fa, #a78bfa, #f472b6)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    backgroundClip: 'text'
+  }
+
+  const subtitleStyle = {
+    fontSize: 'clamp(1.25rem, 4vw, 2rem)',
+    color: '#d1d5db',
+    marginBottom: '2rem'
+  }
+
+  const descriptionStyle = {
+    fontSize: '1.125rem',
+    color: '#9ca3af',
+    maxWidth: '32rem',
+    margin: '0 auto',
+    lineHeight: '1.75',
+    marginBottom: '3rem'
+  }
+
+  const buttonContainerStyle = {
+    display: 'flex',
+    flexWrap: 'wrap' as const,
+    justifyContent: 'center',
+    gap: '1rem',
+    marginBottom: '3rem'
+  }
+
+  const primaryButtonStyle = {
+    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+    backdropFilter: 'blur(10px)',
+    border: '1px solid rgba(255, 255, 255, 0.2)',
+    padding: '1rem 2rem',
+    borderRadius: '9999px',
+    color: 'white',
+    textDecoration: 'none',
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem',
+    transition: 'all 0.3s',
+    fontSize: '1rem',
+    fontWeight: '500'
+  }
+
+  const socialContainerStyle = {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1.5rem'
+  }
+
+  const socialLinkStyle = {
+    color: '#9ca3af',
+    transition: 'color 0.3s',
+    textDecoration: 'none'
+  }
+
+  return (
+    <div style={containerStyle}>
+      {/* Background orbs */}
+      <div style={backgroundOrbStyle1}></div>
+      <div style={backgroundOrbStyle2}></div>
+
+      <div style={contentStyle}>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h1 style={nameStyle}>
+            Wynter Comfort
+          </h1>
+          <h2 style={subtitleStyle}>
+          Creative Web Designer & Developer
+          </h2>
+          <p style={descriptionStyle}>
+            Crafting exceptional digital experiences with modern technologies. 
+            Expert in WordPress, HTML, CSS, JavaScript with 11+ years creating high-quality, 
+            responsive websites and digital marketing designs. 3+ years using React and Next.js,
+            Passionate about combining technical expertise with creative design to drive business growth.
+          </p>
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          style={buttonContainerStyle}
+        >
+          <Link 
+            href="/projects" 
+            style={primaryButtonStyle}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+            View My Work
+            <ArrowRight size={16} />
+          </Link>
+          <a 
+            href="/documents/resume.pdf" 
+            download="WynterComfort-Resume.pdf"
+            style={primaryButtonStyle}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.2)'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
           >
-            Read our docs
+            <Download size={16} />
+            Download Resume
           </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          style={socialContainerStyle}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <a 
+            href="https://www.linkedin.com/in/wynter-comfort-69a294146/" 
+            style={socialLinkStyle}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#9ca3af'}
+          >
+            <Linkedin size={24} />
+          </a>
+          <a 
+            href="mailto:wynter@wyntercomfort.com" 
+            style={socialLinkStyle}
+            onMouseEnter={(e) => (e.target as HTMLElement).style.color = '#ffffff'}
+            onMouseLeave={(e) => (e.target as HTMLElement).style.color = '#9ca3af'}
+          >
+            <Mail size={24} />
+          </a>
+        </motion.div>
+      </div>
+
+      <style jsx>{`
+        @keyframes pulse {
+          0%, 100% {
+            opacity: 0.2;
+          }
+          50% {
+            opacity: 0.3;
+          }
+        }
+      `}</style>
     </div>
-  );
+  )
 }
