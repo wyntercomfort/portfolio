@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
 import { motion } from 'framer-motion'
-import { ArrowRight, Download, Github, Linkedin, Mail } from 'lucide-react'
+import { ArrowRight, Download, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 export default function Home() {

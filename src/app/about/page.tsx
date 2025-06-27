@@ -166,7 +166,7 @@ export default function About() {
         >
           <h1 style={titleStyle}>About Me</h1>
           <p style={subtitleStyle}>
-            I'm a passionate developer who loves creating digital experiences that make a difference.
+            I am a passionate developer who loves creating digital experiences that make a difference.
           </p>
         </motion.div>
 
@@ -185,7 +185,7 @@ export default function About() {
                 full-stack development with strong backend and frontend skills.
               </p>
               <p style={{ marginBottom: '1rem' }}>
-              Over the past 3+ years, I've expanded my expertise into modern JavaScript frameworks, 
+              Over the past 3+ years, I have expanded my expertise into modern JavaScript frameworks, 
                 specializing in React and Next.js development. I excel at creating high-performance, 
                 scalable web applications that combine the best of traditional CMS flexibility with 
                 cutting-edge frontend technologies.

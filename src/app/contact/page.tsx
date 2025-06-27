@@ -182,9 +182,9 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           style={headerStyle}
         >
-          <h1 style={titleStyle}>Let's Work Together</h1>
+          <h1 style={titleStyle}>We Can Work Together</h1>
           <p style={subtitleStyle}>
-            Ready to create exceptional web experiences? I'd love to discuss how my expertise 
+            Ready to create exceptional web experiences? I would love to discuss how my expertise 
             and creative design skills can help drive your business growth.
           </p>
         </motion.div>
