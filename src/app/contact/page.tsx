@@ -199,7 +199,7 @@ export default function Contact() {
             <div style={highlightStyle}>
               <div style={highlightTextStyle}>
                 <Award size={16} />
-                Available for Hudu Technologies position - Website Developer with 11+ year of experience
+                Available for Hudu Technologies position - Website Developer with 10+ year of experience
               </div>
             </div>
 
@@ -255,7 +255,7 @@ export default function Contact() {
               </h3>
               <ul style={{ color: '#d1d5db', lineHeight: '1.75', paddingLeft: '1.25rem' }}>
                 <li>Expert in modern web development</li>
-                <li>4+ years creating high-quality, responsive websites</li>
+                <li>10+ years creating high-quality, responsive websites</li>
                 <li>Experience with CMS platforms and SEO optimization</li>
                 <li>Strong design skills with Adobe Creative Suite</li>
                 <li>Proven track record in improving conversion rates</li>

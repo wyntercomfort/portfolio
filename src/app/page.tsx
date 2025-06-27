@@ -132,7 +132,7 @@ export default function Home() {
           </h2>
           <p style={descriptionStyle}>
             Crafting exceptional digital experiences with modern technologies. 
-            Expert in WordPress, HTML, CSS, JavaScript with 11+ years creating high-quality, 
+            Expert in WordPress, HTML, CSS, JavaScript with 10+ years creating high-quality, 
             responsive websites and digital marketing designs. 3+ years using React and Next.js,
             Passionate about combining technical expertise with creative design to drive business growth.
           </p>
