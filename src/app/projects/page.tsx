@@ -54,8 +54,8 @@ export default function Projects() {
     background: 'linear-gradient(135deg, #1f2937 0%, #1e3a8a 50%, #7c3aed 100%)',
     paddingTop: '5rem',
     paddingBottom: '2rem',
-    paddingLeft: '1.5rem',
-    paddingRight: '1.5rem'
+    paddingLeft: '1rem',
+    paddingRight: '1rem'
   }
 
   const maxWidthStyle = {
@@ -93,14 +93,14 @@ export default function Projects() {
 
   const featuredGridStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
     gap: '2rem',
     marginBottom: '5rem'
   }
 
   const regularGridStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
     gap: '1.5rem'
   }
 
