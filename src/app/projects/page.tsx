@@ -111,13 +111,17 @@ export default function Projects() {
     borderRadius: '1rem',
     overflow: 'hidden',
     transition: 'all 0.3s',
-    cursor: 'pointer'
+    cursor: 'pointer',
+    maxWidth: '100%',
+    width: '100%'
   }
 
   const imageStyle = {
     width: '100%',
     height: '16rem',
-    objectFit: 'cover' as const
+    objectFit: 'cover' as const,
+    display: 'block',
+    maxWidth: '100%'
   }
 
   const cardContentStyle = {
@@ -254,6 +258,7 @@ export default function Projects() {
                   width={600}
                   height={400}
                   style={imageStyle}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 />
                 <div style={cardContentStyle}>
                   <h3 style={cardTitleStyle}>{project.title}</h3>
